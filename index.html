@@ -98,7 +98,37 @@
       <h2>Contact</h2>
       <p class="contact-lead">制作のご依頼やご相談など、お気軽にお問い合わせください。</p>
       
-      <form class="contact-form">
+      <form class="contact-form" action="https://formspree.io/f/xvzwqbyo"
+  method="POST">
+        <div class="form-group">
+          <label for="name">お名前</label>
+          <input type="text" id="name" placeholder="山田 太郎" class="form-input" name="name">
+        </div>
+        
+        <div class="form-group">
+          <label for="email">メールアドレス</label>
+          <input type="email" id="email" placeholder="example@mail.com" class="form-input" name="email">
+        </div>
+        
+        <div class="form-group">
+          <label for="message">お問い合わせ内容</label>
+          <textarea id="message" rows="5" placeholder="ご相談内容をご記入ください" class="form-input" name="message"></textarea>
+        </div>
+        
+        <button type="submit" class="btn-primary btn-submit">送信する</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!--<section id="contact" class="section bg-light fade">
+  <div class="container narrow">
+    <div class="contact-card">
+      <h2>Contact</h2>
+      <p class="contact-lead">制作のご依頼やご相談など、お気軽にお問い合わせください。</p>
+      
+      <form class="contact-form" action="https://formspree.io/f/xvzwqbyo"
+  method="POST">
         <div class="form-group">
           <label for="name">お名前</label>
           <input type="text" id="name" placeholder="山田 太郎" class="form-input">
@@ -118,7 +148,7 @@
       </form>
     </div>
   </div>
-</section>
+</section>-->
 
 <footer>
   <p>© 2026 Kurata</p>
