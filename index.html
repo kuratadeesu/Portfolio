@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Kurata Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <h1 class="logo">Kurata</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#works">Works</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero fade">
+  <div class="hero-inner">
+    <div class="container">
+      <h2>伝わるデザインで、価値を届ける。</h2>
+      <p>Web制作｜シンプル × 洗練 × 誠実 × 信頼</p>
+      <a href="#contact" class="btn-primary">無料で相談する</a>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section fade">
+  <div class="container narrow">
+    <h2>About</h2>
+    <p>
+      システムエンジニアとしての論理的思考と、</br>
+      デザインの視点を掛け合わせたWeb制作を行っています。</br>
+      「見やすい」「伝わる」「信頼できる」サイト制作が強みです。</br>
+      伝えたい「思い」「価値」を一緒に作り上げていきます。
+    </p>
+  </div>
+</section>
+
+<section id="skills" class="section bg-light fade">
+  <div class="container">
+    <h2>Skills</h2>
+    <div class="card-grid">
+      <div class="card">HTML / CSS</div>
+      <div class="card">JavaScript</div>
+      <div class="card">Responsive Design</div>
+      <div class="card">Git / GitHub</div>
+    </div>
+  </div>
+</section>
+
+<section id="works" class="section fade">
+  <div class="container">
+    <h2>Works</h2>
+    <div class="card-grid">
+      <a href="cafe.html" style="text-decoration: none; color: inherit;">
+        <div class="work-card">
+          <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1000&auto=format&fit=crop" alt="Cafe Site Demo" class="work-thumb">
+          <h3>Cafe Homepage</h3>
+          <p>カフェのコンセプトサイト（架空）</p>
+          <p style="color: #ff6868; font-weight: bold; margin-top: 10px;">View Demo →</p>
+        </div>
+      </a>
+
+      <a href="salon.html" style="text-decoration: none; color: inherit;">
+        <div class="work-card">
+          <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1000&auto=format&fit=crop" alt="Salon Site Demo" class="work-thumb">
+          <h3>Hair Salon Site</h3>
+          <p>美容室のポートフォリオ（架空）</p>
+          <p style="color: #ff6868; font-weight: bold; margin-top: 10px;">View Demo →</p>
+        </div>
+      </a>
+
+        <a href="design-gallery.html" style="text-decoration: none; color: inherit;">
+          <div class="work-card">
+            <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&q=80&w=1000" alt="Design Gallery" class="work-thumb">
+            <h3>Graphic Design</h3>
+            <p>バナー・リッチメニュー等の制作集</p>
+            <p style="color: #ff6868; font-weight: bold; margin-top: 10px;">View Gallery →</p>
+          </div>
+        </a>
+      </div>
+  </div>
+</section>
+
+<section id="contact" class="section bg-light fade">
+  <div class="container narrow">
+    <div class="contact-card">
+      <h2>Contact</h2>
+      <p class="contact-lead">制作のご依頼やご相談など、お気軽にお問い合わせください。</p>
+      
+      <form class="contact-form">
+        <div class="form-group">
+          <label for="name">お名前</label>
+          <input type="text" id="name" placeholder="山田 太郎" class="form-input">
+        </div>
+        
+        <div class="form-group">
+          <label for="email">メールアドレス</label>
+          <input type="email" id="email" placeholder="example@mail.com" class="form-input">
+        </div>
+        
+        <div class="form-group">
+          <label for="message">お問い合わせ内容</label>
+          <textarea id="message" rows="5" placeholder="ご相談内容をご記入ください" class="form-input"></textarea>
+        </div>
+        
+        <button type="submit" class="btn-primary btn-submit">送信する</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Kurata</p>
+</footer>
+
+<script>
+const fades = document.querySelectorAll('.fade');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+});
+fades.forEach(fade => observer.observe(fade));
+</script>
+
+</body>
+</html>

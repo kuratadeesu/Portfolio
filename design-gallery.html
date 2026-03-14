@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Design Gallery | Kurata Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 50px;
+    }
+    .design-item {
+      background: #fff;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+      transition: 0.3s;
+    }
+    .design-item:hover {
+      transform: translateY(-5px);
+    }
+    .design-img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-bottom: 1px solid #eee;
+    }
+    .design-info {
+      padding: 20px;
+    }
+    .design-category {
+      display: inline-block;
+      font-size: 12px;
+      background: #ff6868;
+      color: #fff;
+      padding: 2px 10px;
+      border-radius: 20px;
+      margin-bottom: 10px;
+    }
+    .design-info h3 { font-size: 18px; margin-bottom: 5px; }
+    .design-info p { font-size: 14px; color: #666; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 class="logo">DESIGN WORKS</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Portfolioに戻る</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <h2 style="text-align:center;">Design Gallery</h2>
+      <p style="text-align:center; color:#888;">バナー・LPデザイン・公式LINEリッチメニューなど</p>
+
+      <div class="gallery-grid">
+        <div class="design-item">
+          <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=1000&auto=format&fit=crop" alt="Banner Design" class="design-img">
+          <div class="design-info">
+            <span class="design-category">Banner</span>
+            <h3>冬のセール告知バナー</h3>
+            <p>ターゲット：20代女性 / 視認性を重視した配色</p>
+          </div>
+        </div>
+
+        <div class="design-item">
+          <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=1000&auto=format&fit=crop" alt="LINE Rich Menu" class="design-img">
+          <div class="design-info">
+            <span class="design-category">LINE Menu</span>
+            <h3>カフェ公式LINEメニュー</h3>
+            <p>直感的に操作できるアイコン配置</p>
+          </div>
+        </div>
+
+        <div class="design-item">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1000" alt="LP Design" class="design-img">
+          <div class="design-info">
+            <span class="design-category">LP Design</span>
+            <h3>美容液の販売用LP</h3>
+            <p>清潔感と高級感を両立させたデザイン</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Design Portfolio / Created by Kurata</p>
+  </footer>
+</body>
+</html>
