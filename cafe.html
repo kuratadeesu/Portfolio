@@ -2,163 +2,129 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>Cafe Sample | Kurata Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <style>
-    /* カフェサイト独自のスタイル */
-    
-    /* ヒーローエリアの調整 */
-    .cafe-hero {
-      position: relative;
-      width: 100%;
-      height: 70vh; /* 少し高さを出します */
-      overflow: hidden;
-    }
-
-    .cafe-hero-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover; /* 画像を枠いっぱいに広げる */
-      object-position: center; /* 中央を中心に表示 */
-    }
-
-    .cafe-hero-content {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-      color: #fff;
-      text-shadow: 0 2px 15px rgba(0,0,0,0.5); /* 文字を読みやすく */
-      width: 90%;
-      max-width: 800px;
-    }
-
-    .cafe-hero-content h1 {
-      font-size: clamp(24px, 6vw, 48px);
-      margin-bottom: 15px;
-      line-height: 1.4;
-    }
-
-    /* 新設：コンセプトセクション */
-    .concept-flex {
-      display: flex;
-      align-items: center;
-      gap: 50px;
-      margin-top: 50px;
-    }
-
-    .concept-img {
-      width: 50%;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    }
-
-    .concept-text {
-      width: 50%;
-    }
-
-    /* メニューセクションの調整 */
-    .menu-flex {
-      display: flex;
-      gap: 50px;
-      margin-top: 50px;
-      align-items: flex-start;
-    }
-
-    .menu-list {
-      flex: 1; /* 残りのスペースを埋める */
-    }
-
-    .menu-item {
-      display: flex;
-      justify-content: space-between;
-      border-bottom: 1px dotted #ccc;
-      margin-bottom: 20px;
-      padding-bottom: 10px;
-      font-size: 18px;
-    }
-
-    .menu-price {
-      font-weight: 700;
-      color: #ff6868; /* ポートフォリオのアクセントカラーを使用 */
-    }
-
-    .menu-img {
-      width: 40%;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    }
-
-    /* レスポンシブ対応（スマホ） */
-    @media (max-width: 768px) {
-      .concept-flex, .menu-flex {
-        flex-direction: column; /* 縦並びにする */
-        gap: 30px;
-      }
-
-      .concept-img, .concept-text, .menu-img, .menu-list {
-        width: 100%;
-      }
-      
-      .cafe-hero {
-        height: 50vh;
-      }
-    }
-  </style>
+  <title>CAFE DEMO | Home</title>
+  <link rel="stylesheet" href="cafeStyle.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
+
   <header>
     <div class="container">
       <h1 class="logo">CAFE DEMO</h1>
       <nav>
         <ul>
-          <li><a href="index.html">Portfolioに戻る</a></li>
+          <li><a href="index.html">Portfolio</a></li>
+          <li><a href="cafe.html">Home</a></li>
+          <li><a href="concept.html">Concept</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="access.html">Access</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <section class="cafe-hero">
-    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=2000&auto=format&fit=crop" alt="カフェの店内" class="cafe-hero-img">
-    <div class="cafe-hero-content">
-      <h1>香り高い一杯と、<br>穏やかな時間を。</h1>
-      <p>Organic Coffee & Homemade Sweets</p>
-    </div>
-  </section>
+  <main>
+    <section class="hero">
+      <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?q=80&w=1600" alt="Hero" class="hero-img">
+      <div class="hero-content" data-aos="fade-up" data-aos-duration="1500">
+        <h1>香り高い一杯と、<br>穏やかな時間を。</h1>
+        <p style="font-family:'Playfair Display'; font-style:italic;">Organic Coffee & Homemade Sweets</p>
+      </div>
+      <div class="scroll-down">Scroll</div>
+    </section>
 
-  <section class="section">
-    <div class="container">
-      <h2>Concept</h2>
-      <div class="concept-flex">
-        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1000&auto=format&fit=crop" alt="コーヒーを淹れる様子" class="concept-img">
-        <div class="concept-text">
-          <h3>こだわりの豆と、くつろぎの空間</h3>
-          <p>当店では、世界中から厳選したオーガニック豆を自社焙煎し、一杯ずつ丁寧にハンドドリップで提供しています。</p>
-          <p style="margin-top: 15px;">木の温かみを感じる店内で、日常の喧騒を忘れ、ゆったりとした時間をお過ごしください。</p>
+    <section class="section">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <span class="deco-text">Concept</span>
+          <h2>Concept</h2>
+          <span>私たちの想い</span>
+        </div>
+        <div style="text-align: center; max-width: 700px; margin: 0 auto;" data-aos="fade-up" data-aos-delay="200">
+          <p>厳選された豆を自社で焙煎し、一杯ずつ丁寧にハンドドリップで提供しています。<br>
+          木の温もりあふれる空間で、日常の喧騒を忘れるひとときを。</p>
+          <a href="concept.html" style="display: inline-block; margin-top: 30px; border-bottom: 1px solid var(--accent-color); padding-bottom: 5px; font-size: 14px;">Read Our Story</a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section bg-light">
-    <div class="container">
-      <h2>Menu</h2>
-      <div class="menu-flex">
-        <div class="menu-list">
-          <div class="menu-item"><span>ブレンドコーヒー</span><span class="menu-price">¥500</span></div>
-          <div class="menu-item"><span>カフェラテ</span><span class="menu-price">¥550</span></div>
-          <div class="menu-item"><span>季節のタルト</span><span class="menu-price">¥600</span></div>
-          <div class="menu-item"><span>自家製スコーン</span><span class="menu-price">¥450</span></div>
-        </div>
-        <img src="https://images.unsplash.com/photo-1586985289906-406988974504?q=80&w=1000&auto=format&fit=crop" alt="美味しそうなケーキ" class="menu-img">
+    <section class="parallax-bg" style="background-image: url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1600');">
+      <div style="position: relative; color: white; text-align: center;" data-aos="zoom-in">
+        <h2 style="font-family: 'Playfair Display'; font-style: italic; font-size: 32px;">Time for yourself.</h2>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section class="section" style="background: #fff;">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <span class="deco-text">Menu</span>
+          <h2>Menu</h2>
+          <span>お品書き</span>
+        </div>
+
+        <div class="menu-digest-grid">
+          <div class="menu-digest-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="menu-digest-circle">
+              <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?q=80&w=600" alt="Hand Drip Coffee">
+            </div>
+            <p class="menu-digest-name">Hand Drip Coffee</p>
+            <p class="menu-digest-price">¥550</p>
+          </div>
+
+          <div class="menu-digest-item" data-aos="fade-up" data-aos-delay="300">
+            <div class="menu-digest-circle">
+              <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?q=80&w=600" alt="Cafe Latte">
+            </div>
+            <p class="menu-digest-name">Cafe Latte</p>
+            <p class="menu-digest-price">¥600</p>
+          </div>
+
+          <div class="menu-digest-item" data-aos="fade-up" data-aos-delay="500">
+            <div class="menu-digest-circle">
+              <img src="https://images.unsplash.com/photo-1519915028121-7d3463d20b13?q=80&w=600" alt="Tart">
+            </div>
+            <p class="menu-digest-name">Seasonal Tart</p>
+            <p class="menu-digest-price">¥680</p>
+          </div>
+        </div>
+
+        <div style="text-align: center;" data-aos="fade-up">
+          <a href="menu.html" class="btn-outline">VIEW FULL MENU</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container" style="display: flex; gap: 80px; flex-wrap: wrap;">
+        <div style="flex: 1; min-width: 300px;" data-aos="fade-right">
+          <div class="section-title" style="text-align: left;">
+            <span class="deco-text" style="left: 0; transform: none;">News</span>
+            <h2>News</h2>
+          </div>
+          <p style="font-size: 14px; margin-bottom: 10px;">2026.03.17 | 春の新作タルトが登場します</p>
+          <a href="news.html" style="font-size: 13px; text-decoration: underline;">Read More</a>
+        </div>
+        <div style="flex: 1; min-width: 300px;" data-aos="fade-left">
+          <div class="section-title" style="text-align: left;">
+            <span class="deco-text" style="left: 0; transform: none;">Access</span>
+            <h2>Access</h2>
+          </div>
+          <p style="font-size: 14px;">東京都渋谷区〇〇町 1-2-3<br>11:00 - 19:00 / Tuesday Closed</p>
+          <a href="access.html" style="font-size: 13px; text-decoration: underline;">Open Google Maps</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    <p>© 2026 Cafe Demo / Created by Kurata</p>
+    <p>© 2026 CAFE DEMO / Created by Kurata</p>
   </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true, duration: 1000 });
+  </script>
 </body>
 </html>
